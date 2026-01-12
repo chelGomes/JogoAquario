@@ -184,7 +184,7 @@ public class AquarioValidacaoTest {
             aquario.inicializarPeixes(1, 0);
             fail("Deveria lançar IllegalArgumentException para Y = 0");
         } catch (IllegalArgumentException e) {
-            assertEquals("Quantidade Y invÃ¡lida.", e.getMessage());
+            assertEquals("Quantidade Y invalida.", e.getMessage());
         }
     }
     
