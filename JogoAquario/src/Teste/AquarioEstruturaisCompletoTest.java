@@ -41,7 +41,7 @@ public class AquarioEstruturaisCompletoTest {
         aquario.adicionarPeixe(new PeixeA(1, 0), 1, 0);
         aquario.adicionarPeixe(new PeixeB(1, 1), 1, 1);
         
-        // Buscar célula livre (não deve encontrar)
+        // Buscar celula livre (não deve encontrar)
         int[] resultado = aquario.buscarCelulaLivreAdjacente(1, 1);
         
         assertNull("N�o deve encontrar celula livre quando aquario esta cheio", resultado);
@@ -146,12 +146,12 @@ public class AquarioEstruturaisCompletoTest {
         PeixeA peixeA = new PeixeA(0, 0);
         aquario.adicionarPeixe(peixeA, 0, 0);
         
-        // Preencher células adjacentes
+        // Preencher celulas adjacentes
         aquario.adicionarPeixe(new PeixeB(0, 1), 0, 1);
         aquario.adicionarPeixe(new PeixeB(1, 0), 1, 0);
         aquario.adicionarPeixe(new PeixeB(1, 1), 1, 1);
         
-        // For�ar contador de movimentos
+       
         peixeA.incrementarMovimentos();
         
         boolean reproduziu = peixeA.verificarReproducao(1, aquario);
@@ -240,7 +240,7 @@ public class AquarioEstruturaisCompletoTest {
         aquario.adicionarPeixe(peixeB1, 1, 1);
         aquario.adicionarPeixe(peixeB2, 1, 2);
         
-        // Forçar contador de comidas
+       
         peixeB1.incrementarComidas();
         
         boolean reproduziu = peixeB1.verificarReproducao(1, aquario);
@@ -259,12 +259,12 @@ public class AquarioEstruturaisCompletoTest {
         PeixeB peixeB = new PeixeB(0, 0);
         aquario.adicionarPeixe(peixeB, 0, 0);
         
-        // Preencher células adjacentes
+        // Preencher celulas adjacentes
         aquario.adicionarPeixe(new PeixeA(0, 1), 0, 1);
         aquario.adicionarPeixe(new PeixeA(1, 0), 1, 0);
         aquario.adicionarPeixe(new PeixeA(1, 1), 1, 1);
         
-        // Forçar contador de comidas
+     
         peixeB.incrementarComidas();
         
         boolean reproduziu = peixeB.verificarReproducao(1, aquario);
@@ -321,7 +321,7 @@ public class AquarioEstruturaisCompletoTest {
         assertTrue("Deve morrer quando contador >= MB", deveMorrer);
     }
     
-    // ========== TESTES DE POSIÇÕES NA BORDA ==========
+    // ========== TESTES DE POSI�OES NA BORDA ==========
     
     /**
      * Testa peixe no canto superior esquerdo (0,0)
@@ -388,7 +388,7 @@ public class AquarioEstruturaisCompletoTest {
         assertNotNull("Deve encontrar celula livre adjacente", celulaLivre);
     }
     
-    // ========== TESTES DE MÉTODOS AUXILIARES ==========
+    // ========== TESTES DE METODOS AUXILIARES ==========
     
     /**
      * Testa metodo toString() da classe Celula vazia
@@ -511,7 +511,7 @@ public class AquarioEstruturaisCompletoTest {
     // ========== TESTES DE CASOS EXTREMOS ==========
     
     /**
-     * Testa aquário retangular (não quadrado)
+     * Testa aquario retangular (nao quadrado)
      */
     @Test
     public void testAquario_Retangular() {
@@ -532,12 +532,12 @@ public class AquarioEstruturaisCompletoTest {
         aquario = new Aquario(5, 5, 1, 1, 1, 1);
         aquario.inicializarPeixes(3, 2);
         
-        // Executar algumas iterações
+        
         for (int i = 0; i < 10; i++) {
             aquario.executarIteracao();
         }
         
-        // Verificar que o jogo não travou
+        
         assertTrue("Jogo deve ter executado", aquario.getIteracoes() == 10);
     }
     
