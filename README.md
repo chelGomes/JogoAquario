@@ -71,3 +71,27 @@ Para executar os testes com mais detalhes:
 ```bash
 mvn test -Dtest=AquarioTest
 ```
+
+
+# Etapa III – Teste de Mutação (PITest)
+
+Esta etapa do trabalho tem como objetivo aplicar o critério de **Teste de Mutação** ao sistema *Jogo do Aquário*, 
+avaliando a qualidade e a robustez dos casos de teste desenvolvidos nas etapas anteriores.
+
+## Objetivos
+- Aplicar o PITest para geração e execução de mutantes.
+- Analisar o escore de mutação obtido.
+- Identificar mutantes sobreviventes e possíveis mutantes equivalentes.
+- Fortalecer os casos de teste existentes com base nos resultados da análise.
+
+## Estrutura dos Testes
+Os testes estão organizados por responsabilidade:
+- **Testes Estruturais**: verificação de métodos e representações internas.
+- **Testes de Regras**: validação do comportamento do jogo (movimentação, alimentação e reprodução).
+- **Testes de Validação**: verificação de entradas inválidas e tratamento de exceções.
+
+## Resultados
+- Escore de mutação elevado após o fortalecimento dos testes.
+- Presença de mutantes equivalentes e mutantes sem cobertura, o que impede atingir 100% de escore.
+- A técnica se mostrou eficaz para revelar fragilidades nos testes e orientar melhorias.
+
