@@ -84,6 +84,11 @@ avaliando a qualidade e a robustez dos casos de teste desenvolvidos nas etapas a
 - Identificar mutantes sobreviventes e possíveis mutantes equivalentes.
 - Fortalecer os casos de teste existentes com base nos resultados da análise.
 
+## Ferramentas Utilizadas
+- **JUnit** – execução dos casos de teste.
+- **PITest** – análise de mutação.
+- **Java** – implementação do sistema e dos testes.
+
 ## Estrutura dos Testes
 Os testes estão organizados por responsabilidade:
 - **Testes Estruturais**: verificação de métodos e representações internas.
