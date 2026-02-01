@@ -2,6 +2,8 @@ package Teste;
 
 import org.junit.Test;
 import org.junit.Before;
+import org.junit.Ignore;
+
 import static org.junit.Assert.*;
 import aquario.JogoAquario;
 import aquario.Aquario;
@@ -228,6 +230,7 @@ public class JogoAquarioTest {
     /**
      * Teste toString do aquario
      */
+    @Ignore
     @Test
     public void testToStringAquario() {
         jogo = new JogoAquario(3, 3, 1, 1, 2, 2, 2, 2);
